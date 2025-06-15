@@ -79,19 +79,43 @@ console.log(uniqueItems(arr1, arr2));
 
 // ["Femi", "Faranak", "Anbu", "Manoshree", "Amrita", "Ellie","Komal", "Elena", "Carole","Kseniia", "Cindy", "Sarah"]
 
-// console.log('femi')
 
-// test:
-// const arr1 = [1, 2, 3, 4, 5];
-// const arr2 = [3, 4, 5, 6, 7];
-// console.log(findUniqueElements(arr1, arr2)); 
-// output: [3, 4, 5]
-// console.log('k')
-// c
 
-// const array5= [1,2,’a’];
-// console.log(array5.concat('b'));
-//console.log(array5);
+//startWithSameLetter = (classNames) => {console.log(classNames.filter())}
+  
+ 
+// Write a function to group names by the first letter, e.g Femi, Faranak
+// Anbu, Amrita,
+// Ellie, Elena
+// Carole, Cindy
+
+// ["Femi", "Faranak", "Anbu", "Manoshree", "Amrita", "Ellie","Komal", "Elena", "Carole","Kseniia", "Cindy", "Sarah"]
+
+// let classNames = ["Femi", "Faranak", "Anbu", "Manoshree", "Amrita", "Ellie","Komal", "Elena", "Carole","Kseniia", "Cindy", "Sarah"]
+
+// function groupByFirstLetter(names) {
+//   let grouped = [];
+
+//   for (let student of names) {
+//     let firstLetter = student[0].toUpperCase()}
+
+//     if(!grouped[firstLettter]) {
+//       grouped[firstLetter]= []
+//      }
+
+//     grouped[firstLetter].push(student);
+//   }
+
+//   // Convert the object to a list of arrays
+//   // let result = Object.values(grouped);
+//   console.log(result);
+
+
+// groupByFirstLetter(classNames)
+
+
+
+
 
 
 
