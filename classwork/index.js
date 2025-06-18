@@ -7,41 +7,57 @@
 // Input: 85
 // Output: B
 
-let studentGrade = 85;
+// let studentGrade = 85;
 
-if (studentGrade > 90) {console.log('Grade is A')}
-  else if (studentGrade > 80) {console.log('Grade is B')}
-  else if (studentGrade > 70) {console.log('Grade is C')}
-  else if (studentGrade > 60) {console.log('Grade is D')}
-  else if (studentGrade > 50) {console.log('Grade is E')}
-  else 
-  {console.log('Grade is F')};
+// if (studentGrade > 90) {console.log('Grade is A')}
+//   else if (studentGrade > 80) {console.log('Grade is B')}
+//   else if (studentGrade > 70) {console.log('Grade is C')}
+//   else if (studentGrade > 60) {console.log('Grade is D')}
+//   else if (studentGrade > 50) {console.log('Grade is E')}
+//   else 
+//   {console.log('Grade is F')};
       
 
 
-// Write a function that takes two arrays as arguments and returns a new array containing only the unique elements that are present in both arrays. Use Sets to implement this function.
+// // Write a function that takes two arrays as arguments and returns a new array containing only the unique elements that are present in both arrays. Use Sets to implement this function.
 
-let arr1 = [ 2, 4, 'girl', 'boy', 12, 13]
+// let arr1 = [ 2, 4, 'girl', 'boy', 12, 13]
 
-let arr2 = [ 5, 13, 'girls', 'boy', 5, 12]
+// let arr2 = [ 5, 13, 'girls', 'boy', 5, 12]
 
-let uniqueItems = function(arr1, arr2) {
+// let uniqueItems = function(arr1, arr2) {
 
-  let uniques = [];
+//   let uniques = [];
 
-  for (let j=0; j<arr2.length; j++) {
-    for ( let i=0; i<arr1.length; i++) {
-      if (arr1[i] === arr2[j] && !uniques.includes(arr1[i])) 
-     {
-    uniques.push(arr1[i])
-  }
+//   for (let j=0; j<arr2.length; j++) {
+//     for ( let i=0; i<arr1.length; i++) {
+//       if (arr1[i] === arr2[j] && !uniques.includes(arr1[i])) 
+//      {
+//     uniques.push(arr1[i])
+//   }
     
+//   }
+// }
+// return uniques;
+// }
+
+// console.log(uniqueItems(arr1, arr2));
+
+const person = {
+  _firstName: 'John',
+  _lastName: 'Doe',
+get fullName() {
+    if (this._firstName && this._lastName){
+      return `${this._firstName} ${this._lastName}`;
+    } else {
+      return 'Missing a first name or a last name.';
+    }
   }
 }
-return uniques;
-}
 
-console.log(uniqueItems(arr1, arr2));
+// To call the getter method: 
+console.log(person.fullName); // 'John Doe'
+
 
   
 
