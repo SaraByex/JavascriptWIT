@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DOM Text Demo</title>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>DOM Text Comparison</h2>
+
+  <div id="example">
+    Hello <span class="hidden">invisible</span> <b>World</b>!
+  </div>
+
+  <button onclick="showText()">Show All Outputs</button>
+
+  <p><strong>textContent:</strong> <span id="out1"></span></p>
+  <p><strong>innerText:</strong> <span id="out2"></span></p>
+  <p><strong>innerHTML:</strong> <span id="out3"></span></p>
+
+  <script>
+    function showText() {
+      const el = document.getElementById("example");
+
+      document.getElementById("out1").textContent = el.textContent;
+      document.getElementById("out2").textContent = el.innerText;
+      document.getElementById("out3").textContent = el.innerHTML;
+    }
+  </script>
+
+</body>
+</html>
