@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handle Bars</title>
+</head>
+<body>
+
+     <!-- this is where we display/render the template -->
+    <div id="result">
+        <p>Hello {{username}}!</p>
+        <p>DO i see this</p>
+    </div>
+
+
+    <!-- this is where we create our handlebars template -->
+    <script id="email-template" type="text/x-handlebars-template">
+       
+        {{#if isAdmin}}
+            <p>Hello Admin {{username}}!</p>
+        {{else}}
+            <p>Hello {{username}}!</p>
+        {{/if}}
+        <article>Welcome to MCA WIT program, we are glad to have you</article>
+        <p>These are the next step to continue in this program</p>
+        {{#each nextsteps}}
+            <li>{{step}} - {{instruction}}</li>
+        {{/each}}
+
+        
+        <p>Best,</p>
+        <p>MCA</p>
+    </script>
+   
+    <!-- this is the handle bar library -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"></script>
+   
+    <!-- this is the script to render the template -->
+    <script>
+        let emailsource = document.getElementById("email-template").innerHTML;
+        const template = Handlebars.compile(emailsource);
+        const context = {
+            username: "Femi",
+            isAdmin: false,
+            nextsteps: [
+                {step: "Step One", instruction: "Fill in the onboarding form"},
+                {step: "Step Two", instruction: "Watch the instruction Video"}
+                // {stepone: "Fill in the onboarding form"},
+                // {steptwo: "Watch the instruction Video"}
+            ]
+        };
+
+        const html = template(context);
+        document.getElementById("result").innerHTML = html;
+
+    </script>
+</body>
+</html>

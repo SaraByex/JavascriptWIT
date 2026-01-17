@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"></script>
+</head>
+<body>
+  <script class="text/x-handlebars-template" id="email-template">
+    <p>Hello {{username}}!</p>
+    <article>Welcome to MCA.  Enjoy your stay.</article>
+    <p>These are the next steps
+      {{#each nextsteps}}
+      <li>steps</li>
+      <li></li>
+
+      {{/each}}
+      </p>
+  </script>
+
+
+
+  <div id="result"></div> 
+  
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"></script>
+
+  <script>
+    let emailsource = getElementById("email-template").innerHTML;
+    const template = Handlebars.compile(emailsource)
+    const context = {
+      username: Sarah
+      nextstep: {
+        {step1: fill in the onboarding form;
+        step2: watch instructional video;}
+      }
+    };
+
+    const html = template(context);
+    document.getElementById
+
+  </script>
+  
+</body>
+</html>

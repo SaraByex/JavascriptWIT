@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Lesson</title>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"></script>
+  </head>
+  <body>
+    <section style="display: flex; gap: 20px;">
+      <article id="article1">
+      <p>This is Article 1</p>
+      <br>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Fugit possimus voluptas quam in explicabo. Eos molestiae nihil debitis, praesentium nostrum doloremque magnam exercitationem magni quam nobis ratione facilis, unde vero?
+    </article>
+        
+       <div> <aside class="docparagraph">
+          <p >This is a p-tag in Aside</p>
+        </aside>
+          <p class='docparagraph'>This is a p-tag</p>
+        </div>
+    </section>
+    <div>
+      <article id="article2">
+      This is Article 2<br>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Fugit possimus voluptas quam in explicabo. Eos molestiae nihil debitis, praesentium nostrum doloremque magnam exercitationem magni quam nobis ratione facilis, unde vero?
+      </article><br>
+    </div>
+
+  <section>
+    <div>
+      <form>
+          <div>
+          <label for="firstname">Name:</label>
+          <input type="text" id="firstname">
+        </div>
+        <div>
+          <label for="emailaddress">Email address:</label>
+          <input type="text" id="emailaddress">
+        </div>
+        <div>
+          <label for="preferedsection">Prefered Section</label>
+          <select id="preferedsection">
+            <option value="sectiona">Section A</option>
+            <option value="sectionb">Section B</option>
+            <option value="sectionc">Section C</option>
+          </select>
+        </div>
+        <div>
+          <label for="address">Visiting From?:</label>
+          <input type="text" id="address">
+        </div>
+        <div>
+          <input type="submit" id="submitbtn" value="Submit">
+        </div>
+      </form>
+    </div>
+  </section>
+  <div>
+      <div style="border: 1px dashed royalblue;">
+          <p>Name: <span id="ticketname">Jane Doe</span></p>
+          <p>Email address: <span id="ticketemail">Janedoe@gmail.com</span></p>
+          <p>City: <span id="ticketcity">Calgary</span></p>
+          <p>Sitted Section: <span id="ticketsection">Section A</span></p>
+              </div>
+          </div>
+    <script src="dom_lesson.js"></script>
+  </body>
+</html>
